@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Generator | Cosas Learning</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css"> 
+    <!-- Icon CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- HTML To Canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" 
+    integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <!-- Div For Html To Canvas -->
+  <div id="myCanvas"></div>
+    <!-- Gradient Color Generator -->
+    <div class="wrapper">
+        <div class="row options">
+          <!-- Logo Box -->
+          <div class="row-item-middle logo">
+           <a href="https://cosaslearning.com/" target="_blank"><img src="logo.png" alt="logo"></a>
+          </div>
+            <!-- Select Menu For Gradient Direction -->
+            <div class="column direction row-item">
+              <p>Direction</p>
+              <div class="select-box">
+                <select>
+                  <option value="to top">Top</option>
+                  <option value="to top right">Top right</option>
+                  <option value="to right">Right</option>
+                  <option value="to bottom right">Bottom right</option>
+                  <option value="to bottom">Bottom</option>
+                  <option value="to bottom left">Bottom Left</option>
+                  <option value="to left">Left</option>
+                  <option value="to top left" selected>Top left</option>
+                </select>
+              </div>
+            </div>
+            <!-- Color Input Box -->
+            <div class="column palette row-item">
+              <p>Colors</p>
+              <div class="colors">
+                <input type="color" value="#8b42cf">
+                <input type="color" value="#7bda23">
+              </div>
+            </div>
+            <!-- Textarea -->
+            <div class="row-item-big">
+              <textarea disabled>background-image: linear-gradient(to left top, #977DFE,  #6878FF);</textarea>
+            </div>
+            <!-- Buttons -->
+            <div class="buttons row-item">
+              <button class="copy">Copy Code</button>
+              <button class="download tooltip"><i class="fa-solid fa-download"></i></button>
+             </div> 
+          </div>
+        <!-- Gradient Box -->
+        <div class="gradient-box"></div>
+     </div>
+     <!-- End Gradient Color Generator -->
+     <!-- Ramdom Gradient Colors -->
+     <ul class="container"></ul>
+     <!-- Refresh Button -->
+     <button class="refresh"><i class="fa-solid fa-arrows-rotate"></i> Refresh</button>  
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>   
+</html>
