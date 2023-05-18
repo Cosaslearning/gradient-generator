@@ -128,7 +128,7 @@ function downloadGradient(directionDown, firstclrDown, secondclrDown) {
   html2canvas(canvasDiv).then(function(canvas) {
   // Convert the canvas to a data URL and download as a JPG file
    var link = document.createElement("a");
-   link.download = "myImage.jpg";
+   link.download = "Gradient-Cosas-Learning.jpg";
    link.href = canvas.toDataURL("image/jpeg");
    link.click();
   });
